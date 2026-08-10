@@ -65,9 +65,57 @@ This triggered the awakening of the Gito Gito no Mi.
 `devil_fruit_6.txt` was the genuine Devil Fruit because it had execute
 permission, which was specifically checked by `eat.sh`.
 
-### Screenshots
 
-- Screenshot of the Devil Fruit files
-- Screenshot showing the permission comparison
-- Screenshot of the `eat.sh` script
-- Screenshot showing the awakening signature
+## Level 2 — The Two Faces of Whiskey Peak
+
+### Investigation
+
+I first inspected `feast_manifest.txt`.
+
+The initial version contained:
+- Item 01: 50 Barrels of Bink's Sake
+- Item 02: Roasted Sea King Meat
+
+Using Git history, I found two commits:
+- `0c60b00` — Level 2: Arrived at peaceful Whiskey Peak
+- `bc5aff3` — Level 2: Implemented
+
+Comparing the versions showed that Bink's Sake was changed to
+Sleep Powder Infused Sake.
+
+The later commit also contained a hidden vault script:
+`.baroque_works_cache/unlock_vault.sh`
+
+The script required my Level 1 awakening signature.
+
+I exported:
+
+`AWAKENING_SIGNATURE='ONE_PIECE{GITO_GITO_NO_AWAKENING}'`
+
+The vault generated two files:
+- `marine_intercept.log`
+- `bounty_hunter_feed.log`
+
+I compared them using:
+
+`diff marine_intercept.log bounty_hunter_feed.log`
+
+The difference appeared at line 42.
+
+### Discovery
+
+`BAROQUE_DIAL{SPLIT_TIMELINE_MISDIRECTION}`
+
+This was the hidden Level 2 transmission/flag.
+
+### Approach
+
+I used Git history to investigate the changed file, discovered the
+hidden vault script, supplied the awakening signature from Level 1,
+and compared the generated transmission files using `diff`.
+
+### Review
+
+This level taught me how Git history can contain important information
+that is not present in the current working directory, and how `diff`
+can reveal a small but important change between two files.
