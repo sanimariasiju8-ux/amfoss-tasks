@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+main {
+    width: 84%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+main h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main p {
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-section button,
+#themeToggle {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #111827;
+    color: white;
+}
+
+.coin-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.coin-card h2 {
+    margin-bottom: 5px;
+}
+
+.coin-card p {
+    color: #6b7280;
+}
+
+.coin-price {
+    text-align: right;
+}
+
+.chart-section,
+.wishlist-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.time-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.time-buttons button {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.chart-container {
+    position: relative;
+    height: 350px;
+}
+
+#wishlistButton {
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #111827;
+    color: white;
+}
+
+#wishlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wishlist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
+
+.remove-wishlist {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Dark mode */
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode header {
+    background: #030712;
+}
+
+body.dark-mode .coin-card,
+body.dark-mode .chart-section,
+body.dark-mode .wishlist-section {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+body.dark-mode .coin-card p,
+body.dark-mode .chart-section p,
+body.dark-mode .wishlist-section p {
+    color: #d1d5db;
+}
+
+body.dark-mode .search-section input {
+    background: #1f2937;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.dark-mode .time-buttons button {
+    background: #1f2937;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.dark-mode .wishlist-item {
+    border-color: #4b5563;
+}
+
+body.dark-mode #wishlistButton,
+body.dark-mode #themeToggle {
+    background: #f9fafb;
+    color: #111827;
+}
