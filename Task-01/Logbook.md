@@ -119,3 +119,87 @@ and compared the generated transmission files using `diff`.
 This level taught me how Git history can contain important information
 that is not present in the current working directory, and how `diff`
 can reveal a small but important change between two files.
+
+##LEVEL 3 — THE WAX LABYRINTH OF LITTLE GARDEN
+
+### Discovery
+
+While investigating the Wax Jungle, I found several intercepted reports and searched the sector directories for an Executive report.
+
+The file:
+
+"sector_beta/outpost/watchtower/storage/archive/agent_manifest.log"
+
+contained a BAROQUE WORKS EXECUTIVE REPORT.
+
+It also contained a "SECURITY TAG" and the first Poneglyph cipher fragment.
+
+### Approach
+
+The Level 2 Executive Transmission Code was:
+
+"BAROQUE_DIAL[SPLIT_TIMELINE_MISDIRECTION]"
+
+The Security Tag was Base64 encoded. I decoded it using:
+
+"echo 'SECURITY_TAG' | base64 -d"
+
+The decoded value matched the Level 2 Executive Transmission Code.
+
+This confirmed that the report was the genuine Baroque Works Executive transmission.
+
+### Discovery
+
+The genuine report contained:
+
+"PONEGLYPH_FRAGMENT_I = "KjY2MjF4bw0lKzYqNyBsIS0vbTAtJTcnL""
+
+This is the first cipher fragment.
+
+### Review
+
+This level taught me how encoded identifiers can be used to identify the genuine report among many misleading files. I also learned how to recognize and decode Base64 data and verify the result against information discovered in an earlier level
+
+## Level 4 — The Camouflaged Blueprints of Water 7
+
+### Approach
+ 
+- Switched to the "canonical_timeline" branch to access Water 7.
+- Navigated to "GrandLine/Water_7/galley_la_company".
+- Found the disguised file "puffing_tom_blueprints".
+- Used the "file" command and discovered that it was actually gzip-compressed data associated with "step2_blueprints.tar".
+- Extracted the archive and found "step1_blueprints.zip".
+- Extracted the ZIP and found "hull-design" and "secret-link.txt".
+- Investigated "hull-design/frame-specs.dat"; it contained "DECOY-DATA-01", confirming that it was a decoy.
+- Inspected "secret-link.txt" and recovered the second Poneglyph fragment:
+
+### Discovery
+
+"PONEGLYPH_FRAGMENT_II="SwnbzptDiM3JSpvFiMuJ28PJzAlJ28VIzA=""
+
+### Review
+
+Poneglyph Fragment II successfully recovered.
+
+Level 5 requires the two recovered fragments to be restored together before attempting to decipher the inscription.
+
+# Level 5 — The Buster Call Timeline Recovery
+
+### Approach 
+
+- Inspected the Git history using `git log --oneline --all`.
+- Found the `Level 5 : Vault Sealed` commit: `d4e7bf5`.
+- Investigated the later `Vaults REMOVED, Evidences ERASED` commits and walked backward through Git history.
+- At commit `d4e7bf5`, confirmed that the Enies Lobby CP9 secure vault and all five vault decoder files existed.
+- Inspected `.cp9_secure_vault/poneglyph.py` and discovered the decoding method:
+  Base64 decoding followed by XOR with key `0x42`.
+- Recovered Poneglyph Fragment I:
+  `KjY2MjF4bw0lKzYqNyBsIS0vbTAtJTcnL`
+- Combined it with Poneglyph Fragment II recovered in Level 4:
+  `SwnbzptDiM3JSpvFiMuJ28PJzAlJ28VIzA=`
+- Restored the Poneglyph inscription and obtained:
+  `https:-github.com/rogueone-x/Laugh-Tale-Merge-War`
+
+## Result
+
+Poneglyph Fragment I and Fragment II were recovered and restored using the historical decoding method.
