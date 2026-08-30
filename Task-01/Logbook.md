@@ -203,3 +203,46 @@ Level 5 requires the two recovered fragments to be restored together before atte
 ## Result
 
 Poneglyph Fragment I and Fragment II were recovered and restored using the historical decoding method.
+
+# Level 6 — The Great Merge War at Laugh Tale
+
+### Approach
+
+In this level, I worked in the Laugh-Tale-Merge-War repository. First, I checked the treasure folder and found two Poneglyph fragments:
+cat treasure/key_part_1.txt
+which gave:
+PONEGLYPH FRAGMENT α
+
+Recovered Inscription:
+
+Line
+
+Then:
+cat treasure/key_part_2.txt
+which gave:
+PONEGLYPH FRAGMENT β
+
+Recovered Inscription:
+
+bers
+
+Since the task mentioned that the Poneglyphs had conflicting versions, I checked their Git history instead of relying only on the current files.
+I used:
+git log --all --oneline -- treasure/key_part_1.txt
+and:
+git log --all --oneline -- treasure/key_part_2.txt
+This showed that both files had multiple versions across different commits:
+8835d14  Recovered ancient history
+091591f  Current pirate records
+34b8f9a  Initial Laugh Tale records
+I then used git show to inspect the contents of the files at those earlier commits:
+git show 34b8f9a:treasure/key_part_1.txt
+git show 34b8f9a:treasure/key_part_2.txt
+
+git show 091591f:treasure/key_part_1.txt
+git show 091591f:treasure/key_part_2.txt
+By comparing the different historical versions, I was able to reconcile the conflicting records and recover the Pirate King's Password:
+TheGrandLineRemembers
+Finally, I ran:
+./victory.sh
+entered the password, and successfully completed Level 6.
