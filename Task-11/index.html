@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nool — Threads That Connect Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-thread">〜</span>
+            <span>Nool</span>
+        </div>
+
+        <nav>
+            <a href="#explore">Explore</a>
+            <a href="#threads">Threads</a>
+            <a href="#story">Stories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">നൂൽ · NOOL</p>
+
+                <h1>
+                    Threads that<br>
+                    <span>connect us.</span>
+                </h1>
+
+                <p class="hero-text">
+                    A digital journey through the stories, traditions,
+                    art, language and memories that make Kerala home.
+                </p>
+
+                <a href="#explore" class="primary-btn">
+                    Begin the journey →
+                </a>
+
+            </div>
+
+            <div class="hero-art">
+                <div class="sun"></div>
+                <div class="hill hill-one"></div>
+                <div class="hill hill-two"></div>
+                <div class="palm palm-one">🌴</div>
+                <div class="palm palm-two">🌴</div>
+            </div>
+
+        </section>
+
+
+        <section class="intro" id="about">
+
+            <p class="section-label">THE IDEA</p>
+
+            <h2>
+                Every place has a story.
+                <br>
+                <span>Every story has a thread.</span>
+            </h2>
+
+            <p>
+                Nool brings Kerala's cultural threads together in one
+                interactive space — making traditions easier to discover,
+                understand and remember.
+            </p>
+
+        </section>
+
+
+        <section class="explore section" id="explore">
+
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">EXPLORE</p>
+                    <h2>Discover Kerala</h2>
+                </div>
+
+                <p>
+                    Choose a region and discover a piece of its culture.
+                </p>
+            </div>
+
+
+            <div class="kerala-area">
+
+                <div class="kerala-map">
+
+                    <div class="map-shape">
+                        <div class="map-dot dot-north"
+                             onclick="showRegion('North Kerala')"></div>
+
+                        <div class="map-dot dot-central"
+                             onclick="showRegion('Central Kerala')"></div>
+
+                        <div class="map-dot dot-south"
+                             onclick="showRegion('South Kerala')"></div>
+                    </div>
+
+                    <span class="map-label north-label">North</span>
+                    <span class="map-label central-label">Central</span>
+                    <span class="map-label south-label">South</span>
+
+                </div>
+
+
+                <div class="region-info" id="regionInfo">
+
+                    <p class="small-label">SELECT A REGION</p>
+
+                    <h3>Kerala is waiting.</h3>
+
+                    <p>
+                        Tap a region on the map to uncover one of
+                        its cultural threads.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="threads section" id="threads">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">CULTURE THREADS</p>
+                    <h2>What connects us?</h2>
+                </div>
+
+            </div>
+
+
+            <div class="thread-grid">
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">🎭</div>
+
+                    <h3>Art & Performance</h3>
+
+                    <p>
+                        Discover the expressions that have lived
+                        through generations.
+                    </p>
+
+                    <button onclick="openThread('Art & Performance')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">🍲</div>
+
+                    <h3>Food</h3>
+
+                    <p>
+                        Recipes, flavours and memories passed down
+                        through families.
+                    </p>
+
+                    <button onclick="openThread('Food')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">🎉</div>
+
+                    <h3>Festivals</h3>
+
+                    <p>
+                        Celebrations that bring communities together.
+                    </p>
+
+                    <button onclick="openThread('Festivals')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">📖</div>
+
+                    <h3>Stories & Folklore</h3>
+
+                    <p>
+                        Tales, legends and memories carried across time.
+                    </p>
+
+                    <button onclick="openThread('Stories & Folklore')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">🗣️</div>
+
+                    <h3>Language</h3>
+
+                    <p>
+                        Words and expressions that carry culture within them.
+                    </p>
+
+                    <button onclick="openThread('Language')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+
+                <article class="thread-card">
+
+                    <div class="thread-icon">🏛️</div>
+
+                    <h3>Heritage</h3>
+
+                    <p>
+                        Places and traditions that shaped Kerala's identity.
+                    </p>
+
+                    <button onclick="openThread('Heritage')">
+                        Explore thread →
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="story section" id="story">
+
+            <div class="story-image">
+
+                <div class="story-pattern">✦</div>
+
+            </div>
+
+
+            <div class="story-content">
+
+                <p class="section-label">A STORY FROM KERALA</p>
+
+                <h2>
+                    Where tradition
+                    <br>
+                    becomes memory.
+                </h2>
+
+                <p>
+                    From the rhythm of chenda to the colours of
+                    Theyyam, Kerala's culture is not something kept
+                    behind glass. It is something people live.
+                </p>
+
+                <button class="outline-btn" onclick="readStory()">
+                    Read the story →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="word-section">
+
+            <div class="word-card">
+
+                <p class="section-label">TODAY'S THREAD</p>
+
+                <div class="malayalam">നിലാവ്</div>
+
+                <h3>Nilaavu</h3>
+
+                <p class="meaning">/ Moonlight /</p>
+
+                <p>
+                    A beautiful Malayalam word often associated with
+                    quiet nights, memories and poetry.
+                </p>
+
+                <button onclick="newWord()">
+                    Discover another word ↻
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="discover section">
+
+            <p class="section-label">A LITTLE GAME</p>
+
+            <h2>Find the thread.</h2>
+
+            <p>
+                Can you guess where this tradition belongs?
+            </p>
+
+
+            <div class="quiz-card">
+
+                <div class="quiz-icon" id="quizIcon">🎭</div>
+
+                <h3 id="quizQuestion">Theyyam</h3>
+
+                <p>Where would you look for its roots?</p>
+
+
+                <div class="quiz-options">
+
+                    <button onclick="checkAnswer('North Kerala')">
+                        North Kerala
+                    </button>
+
+                    <button onclick="checkAnswer('Central Kerala')">
+                        Central Kerala
+                    </button>
+
+                    <button onclick="checkAnswer('South Kerala')">
+                        South Kerala
+                    </button>
+
+                </div>
+
+
+                <p class="quiz-result" id="quizResult"></p>
+
+            </div>
+
+        </section>
+
+
+        <section class="final-section">
+
+            <p class="malayalam-small">നൂൽ</p>
+
+            <h2>
+                Keep the thread alive.
+            </h2>
+
+            <p>
+                Explore. Remember. Share.
+            </p>
+
+            <span class="coming-soon">
+                A Nool prototype · Coming soon
+            </span>
+
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+
+        <div class="footer-logo">
+            〜 Nool
+        </div>
+
+        <p>
+            Threads that connect us.
+        </p>
+
+        <p class="copyright">
+            © 2026 Nool · A cultural exploration prototype
+        </p>
+
+    </footer>
+
+
+    <div class="modal" id="modal">
+
+        <div class="modal-box">
+
+            <button class="close-btn" onclick="closeModal()">×</button>
+
+            <p class="section-label">NOOL</p>
+
+            <h2 id="modalTitle">Thread</h2>
+
+            <p id="modalText"></p>
+
+            <button class="primary-btn" onclick="closeModal()">
+                Continue exploring
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
