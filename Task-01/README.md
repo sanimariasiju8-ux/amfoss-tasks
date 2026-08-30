@@ -1,18 +1,3 @@
-# Overall Difficulties Faced
-Throughout the Terminal Voyage, the main difficulty was that the answers were not directly given. I had to investigate the repository, understand the clues, inspect files and Git history, and connect information from different levels.
-Some of the difficulties I faced were:
--Understanding the structure of the repository and navigating through different directories.
--Learning Linux terminal commands that I had not used before.
--Understanding how Git branches, commits, and different timelines worked.
--Finding hidden information inside files and scripts.
--Understanding file permissions and executable files.
--Dealing with encoded or obfuscated information.
--Extracting information from archives and following clues between different locations.
--Understanding how different Git histories could contain different versions of the same information.
--Resolving the final conflicting histories instead of simply choosing one version.
--Understanding how to inspect previous versions of files using Git.
--Keeping track of clues and connecting information discovered in different levels.
-
 # What I Learned Throughout the Task
 ## Level 1 — Loguetown Reef
 I learned the basics of navigating a repository using the Linux terminal and exploring its directory and file structure.
@@ -64,6 +49,21 @@ This taught me that Git history is not just a record of changes—it can also pr
 Finally, I reconstructed the password:
 **TheGrandLineRemembers**
 and used victory.sh to verify the solution.
+
+# Overall Difficulties Faced
+Throughout the Terminal Voyage, the main difficulty was that the answers were not directly given. I had to investigate the repository, understand the clues, ins>
+Some of the difficulties I faced were:
+- Understanding the structure of the repository and navigating through different directories.
+- Learning Linux terminal commands that I had not used before.
+- Understanding how Git branches, commits, and different timelines worked.
+- Finding hidden information inside files and scripts.
+- Understanding file permissions and executable files.
+- Dealing with encoded or obfuscated information.
+- Extracting information from archives and following clues between different locations.
+- Understanding how different Git histories could contain different versions of the same information.
+- Resolving the final conflicting histories instead of simply choosing one version.
+- Understanding how to inspect previous versions of files using Git.
+- Keeping track of clues and connecting information discovered in different levels.
 
 ## Overall Learning
 The biggest thing I learned from this task is how to investigate instead of just searching for an answer.
